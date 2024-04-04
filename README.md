@@ -35,6 +35,7 @@ The NBA does a great job providing a wealth of data, but falls short in performi
 ### Offensive Overview
 This page provides insight into how the player is performing relative to similar-usage players (within 5% of the player's usage percentile) at his position. The left side of the page displays traditional box score stats as well as the player's usage percentile. The right side shows how that player compares to his most similar competitors in shooting efficiency, passing ability and limiting turnovers.
 
+![Offensive Overview Page]((https://github.com/danielielusic/NBA-Player-Analytics-Dashboard/blob/main/readme%20images/offensive_overview.png))
 ### Shooting Breakdown
 The shooting breakdown page makes use of player tracking and play-by-play data to dissect a player's strengths and weaknesses as a scorer. The table at the top shows how often and how well he shoots contested and uncontested shots. One can also see where on the court he shoots most often. Lastly, the dumbbell plot indicates how frequently and efficiently the player scores out of different play types.
 
