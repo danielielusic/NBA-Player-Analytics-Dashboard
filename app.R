@@ -1041,7 +1041,7 @@ player_headshots_df <- tibble(player_id = player_ids,
 # User interface specifications
 ui <- dashboardPage(
   # Specify header
-  header = dashboardHeader(title = "NBA Player Analytics"),
+  header = dashboardHeader(title ="NBA Player Analytics"),
   # Sidebar -- allow users to navigate between pages
   sidebar = dashboardSidebar(
     sidebarMenu(id = "sidebarMenuID",
@@ -1054,7 +1054,10 @@ ui <- dashboardPage(
                          tabName = "shooting_breakdown"),
                 # Defensive Breakdown
                 menuItem("Defense and Rebounding",
-                         tabName = "defense_rebounding")
+                         tabName = "defense_rebounding"),
+                # About Page
+                menuItem("About",
+                         tabName = "about")
     ),
     selectizeInput('player_name', 'Select Player:', players,
                    options = list(placeholder = "Type to search...")),
@@ -1112,6 +1115,28 @@ ui <- dashboardPage(
                 column(6, plotOutput('defense_plot')),
                 column(6, plotOutput('rebounding_plot'))
               )
+      ),
+      tabItem(tabName = "about",
+              fluidRow(
+                column(12,
+                       HTML("<h3>Welcome to my NBA Player Analytics Dashboard!</h3>
+           <p>The goal of this project is to make use of the NBA’s rich tracking data to provide a complete view of each player's abilities. Simply type in a player’s name into the search bar to pull up their stats.</p>
+           
+           <h4>The Dashboard Pages:</h4>
+           <p><strong>The first page of the dashboard</strong> is an offensive overview. On the left side, you can see the player’s traditional box score stats as well as their usage relative to other players at the position. The right side of the page shows how that player compares to similar-usage players (within 5% of his usage percentile) at his position. These comparisons span across shooting efficiency, passing ability, and limiting turnovers.</p>
+           
+           <p><strong>The second page</strong> provides a more in-depth view of the player’s shooting ability. The table at the top shows how frequently and efficiently they shoot when open and contested for both twos and threes. The shot chart indicates where on the floor they take their shots. The dumbbell plot gives a deeper look into the player’s playstyle, showing each player’s most frequent and most efficient play types.</p>
+           
+           <p><strong>The third and final page</strong> provides a look into the player’s defense and rebounding abilities. On this page, users can gain a sense of how active a player is defensively, both in terms of steals and blocks as well as more advanced stats like deflections, loose balls recovered, and charges. This page also provides a look into a player’s ability to box out and grab rebounds.</p>
+           
+           <h4>Acknowledgements:</h4>
+           <p>I sincerely thank Martin Barron, my Sports Analytics professor, for troubleshooting code, helping me work through different ideas, and getting me started with my first Shiny App. Additionally, I’d like to thank Owen Phillips for providing web-scraping code to gather stats from the NBA Stats API, Dom Samangy for his tutorial on how to build a shot chart, and the maintainers of the nbaStatR package for making it easy to pull play-by-play data. Without their help, this project would not have been possible.</p>
+           
+           <p>GitHub: <a href='https://github.com/danielielusic/NBA-Player-Analytics-Dashboard' target='_blank'>https://github.com/danielielusic/NBA-Player-Analytics-Dashboard</a></p>"
+                       )
+                )
+              )
+              # about desciption on this page
       )
     )
   )
