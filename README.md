@@ -1,4 +1,5 @@
 # NBA-Player-Analytics-Dashboard
+[Link to Shiny App](https://danielusic.shinyapps.io/nba_player_analytics/)
 ## Project Overview
 - Created an NBA Player Analytics Dashboard which presents both advanced and player tracking stats in a visual and easily interpretable manner.
 - Scraped data from the NBA Stats API to retrieve detailed information on shot types, defensive activity and advanced stats.
