@@ -26,7 +26,7 @@ Additionally, I used the `nbastatR` package to load play-by-play data, which was
 The data does not update automatically - I have to run the web scraping script and push the data online. I will try to do this weekly, but please note that data from the most recent games might not always be available.
 
 ## Data Preparation
-The NBA does a great job providing a wealth of data, but falls short in performing necessary transformations to help interpret this information. I took the following steps before building visualizations to make the data more digestible:
+The NBA does a provides a wealth of tracking data and advanced stats, but falls short in performing necessary transformations to help interpret this information. I took the following steps before building visualizations to make the data more digestible:
 - Standardized stats on a per-36 minute basis to account for differences in playing time.
 - Calculated percentiles of these stats broken down by position to easily compare similar players.
 
@@ -35,12 +35,17 @@ The NBA does a great job providing a wealth of data, but falls short in performi
 ### Offensive Overview
 This page provides insight into how the player is performing relative to similar-usage players (within 5% of the player's usage percentile) at his position. The left side of the page displays traditional box score stats as well as the player's usage percentile. The right side shows how that player compares to his most similar competitors in shooting efficiency, passing ability and limiting turnovers.
 
-![Offensive Overview Page]((https://github.com/danielielusic/NBA-Player-Analytics-Dashboard/blob/main/readme%20images/offensive_overview.png))
+![Offensive Overview Page](https://github.com/danielielusic/NBA-Player-Analytics-Dashboard/blob/main/readme%20images/offensive_overview.png)
+
 ### Shooting Breakdown
 The shooting breakdown page makes use of player tracking and play-by-play data to dissect a player's strengths and weaknesses as a scorer. The table at the top shows how often and how well he shoots contested and uncontested shots. One can also see where on the court he shoots most often. Lastly, the dumbbell plot indicates how frequently and efficiently the player scores out of different play types.
 
+![Shooting Breakdown Page](https://github.com/danielielusic/NBA-Player-Analytics-Dashboard/blob/main/readme%20images/shooting_breakdown.png)
+
 ## Defense and Rebounding
 The final page of statistics indicates how active the player is as a defender and rebounder. The 'Hustle Stats' table uses tracking data to demonstrate impact beyond typical box score stats with metrics such as deflections, charges and boxouts. The scatter plots show how frequently the player records steals, blocks, and rebounds relative to other players at his position.
+
+![Defense and Rebounding Page](https://github.com/danielielusic/NBA-Player-Analytics-Dashboard/blob/main/readme%20images/defense_rebounding.png)
 
 ## Acknowledgements
 This project would not have been possible without my Sports Analytics professor, Martin Barron, who helped me brainstorm ideas and troubleshoot code, and got me started with my first Shiny App. Additionally, I'd like to thank Owen Phillips for his template of web scraping code, Dom Samangy for his tutorial on building a shot chart and the developers of `nbastatR` for making it easy to scrape play-by-play data.
